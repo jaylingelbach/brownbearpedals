@@ -1,4 +1,12 @@
+#startTag{
+  color: #282c34;
+  text-decoration: none;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
 .App {
+  background-color: #282c34;
   text-align: center;
 }
 
@@ -14,7 +22,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
