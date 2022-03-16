@@ -1,18 +1,21 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 import Logo from '../assets/bbcLogo.png';
 
-const pages = ['About', 'How it works', 'Pedals', 'Contact'];
+
+// Maybe move about to footer.  Footer could include about, location, 
+// social media etc
+const pages = ['How it works', 'FAQ', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
@@ -51,15 +54,6 @@ const ResponsiveAppBar = () => {
               component="div"
               sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
             >
-              <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
             <Box
               component="img"
               sx={{
