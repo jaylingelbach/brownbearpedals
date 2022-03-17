@@ -10,13 +10,11 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/faq" component={<Faq />} />
-        
       </Routes>
       <ResponsiveAppBar />
       <header className="App-header">
         <a href='/' id='build-link'> Build it</a>
       </header>
-    
       <SimpleBottomNavigation />
     </div>
   );
