@@ -1,22 +1,23 @@
-import './App.css';
 import { Routes, Route } from "react-router-dom";
+import Contact from "./components/Contact"
+import Faq from './components/faq';
+import Home from './components/Home';
+import HowItWorks from './components/howItWorks';
 import ResponsiveAppBar from './components/header';
 import SimpleBottomNavigation from './components/footer';
-import Faq from './components/faq';
+import './App.css';
 
 
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path="/faq" component={<Faq />} />
-        
-      </Routes>
       <ResponsiveAppBar />
-      <header className="App-header">
-        <a href='/' id='build-link'> Build it</a>
-      </header>
-    
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/how-it-works" element={<HowItWorks />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <SimpleBottomNavigation />
     </div>
   );
