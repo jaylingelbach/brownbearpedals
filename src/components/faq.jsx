@@ -10,7 +10,7 @@ import faqQuestions from '../faqQuestions/faqQuestions';
 export default function Faq() {
   return (
     <div className="App-body">
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{marginTop:2}}>
         <div>
           {faqQuestions.map((prop, key) => {
             return (
