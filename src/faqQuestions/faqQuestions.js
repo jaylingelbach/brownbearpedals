@@ -17,7 +17,7 @@ const faqQuestions = [
     cover the repairs for free.`
 },
 {
-    summary: '****What is the return policy? FIGURE OUT****',
+    summary: '**** What is the return policy? FIGURE OUT ****',
     details: 'FIGURE OUT BEFORE RELEASE'
 },
 {
