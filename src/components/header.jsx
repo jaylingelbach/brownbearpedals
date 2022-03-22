@@ -9,17 +9,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Logo from '../assets/bbcLogo.png';
+import Routes from '../Routes/Routes';
 
-const pages = ['How it works', 'FAQ', 'Contact'];
-
-const ResponsiveAppBar = () => {
-  const [setAnchorElNav] = React.useState(null);
-  
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-
+const ResponsiveAppBar = (props) => {
   const trigger = useScrollTrigger();
   
   const darkTheme = createTheme({
@@ -53,16 +45,19 @@ const ResponsiveAppBar = () => {
                 aria-label="Logo for Brown Bear Creative"
               />
               </Typography>
-              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                {pages.map((page) => (
-                  <Button
-                    key={page}
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: 'white', display: 'block', margin: 'auto' }}
-                  >
-                    {page}
-                  </Button>
-                ))}
+              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>    
+                {Routes.map((prop, key) => {
+                  return (
+                    <Button
+                      key={key}
+                    sx={{ display: 'block', margin: 'auto', textDecoration:'none', color:'white' }}
+                    href={prop.path}
+                    >
+                      {prop.navName}
+                      {/* <Link to={prop.path} style={{ marginTop:2, marginBottom:2, textDecoration: 'none', color:'white' }} key={key}>{prop.navName}</Link> */}
+                    </Button>
+                  );
+                })}
               </Box>
             </Toolbar>
           </Container>
