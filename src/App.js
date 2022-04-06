@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Contact from "./components/Contact"
 import Faq from './components/faq';
 import Home from './components/Home';
@@ -9,7 +10,18 @@ import './App.css';
 
 
 function App() {
+
+  const darkTheme = createTheme({
+    palette: {
+      mode: 'dark',
+      primary: {
+        main: '#1976d2',
+      },
+    },
+  });
+
   return (
+    <ThemeProvider theme={darkTheme}>
     <div className="App">
       <ResponsiveAppBar />
       <Routes>
@@ -20,6 +32,7 @@ function App() {
       </Routes>
       <SimpleBottomNavigation />
     </div>
+    </ThemeProvider>
   );
 }
 

@@ -7,7 +7,6 @@
 
 .App {
   background-color: #282c34;
-  text-align: center;
 }
 
 .App-logo {
@@ -20,25 +19,43 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+@media screen and (min-width: 300px) {
+  .App-body {
+    background-color: 282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
 
-.App-body {
-  background-color: 282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  .Contact-body {
+    background-color: 282c34; 
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
 
-.App-link {
-  color: #61dafb;
-}
+  .Contact-form {
+    background-color: 282c34;
+    flex-direction: column;
+    align-content: left;
+    color: white;
+  }
 
-.route-link {
-  color: white;
-  text-decoration: none;
-  font-size: large;
-  font-weight: bold;
+  .App-link {
+    color: #61dafb;
+  }
+
+  .route-link {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+  }
 }
