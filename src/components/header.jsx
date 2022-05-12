@@ -9,7 +9,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Logo from '../assets/bbcLogo.png';
-import Routes from '../Routes/Routes';
+import Routes from '../Routes/HeaderRoutes';
 
 const ResponsiveAppBar = (props) => {
   const trigger = useScrollTrigger();
