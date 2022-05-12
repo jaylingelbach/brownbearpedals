@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Slide from '@mui/material/Slide';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
@@ -14,17 +13,9 @@ import Routes from '../Routes/Routes';
 const ResponsiveAppBar = (props) => {
   const trigger = useScrollTrigger();
   
-  const darkTheme = createTheme({
-    palette: {
-      mode: 'dark',
-      primary: {
-        main: '#1976d2',
-      },
-    },
-  });
+
 
   return (
-    <ThemeProvider theme={darkTheme}>
       <Slide appear={false} direction="down" in={!trigger}>
         <AppBar position="static">
           <Container maxWidth="xl">
@@ -54,7 +45,6 @@ const ResponsiveAppBar = (props) => {
                     href={prop.path}
                     >
                       {prop.navName}
-                      {/* <Link to={prop.path} style={{ marginTop:2, marginBottom:2, textDecoration: 'none', color:'white' }} key={key}>{prop.navName}</Link> */}
                     </Button>
                   );
                 })}
@@ -63,7 +53,6 @@ const ResponsiveAppBar = (props) => {
           </Container>
         </AppBar>
       </Slide>
-    </ThemeProvider>
   );
 };
 export default ResponsiveAppBar;
