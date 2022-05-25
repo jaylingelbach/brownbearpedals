@@ -34,7 +34,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/location" element={<Location />} />
-        <Route path="/insta" element={<Insta />} />
+        <Route path="/instagram" element={<Insta />} />
       </Routes>
       <SimpleBottomNavigation />
     </div>
