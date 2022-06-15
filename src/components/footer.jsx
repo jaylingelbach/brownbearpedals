@@ -15,7 +15,7 @@ export default function SimpleBottomNavigation() {
   let instagram = footerRoutes[2].path;
 
   return (
-      <Box sx={{ width: 'auto' }}>
+      <Box sx={{ width: 'auto', mt:2 }}>
       <BottomNavigation
           showLabels
           value={value}
