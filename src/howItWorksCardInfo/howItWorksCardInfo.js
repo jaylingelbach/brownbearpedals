@@ -11,7 +11,7 @@ const howItWorksCardInfo = [
     },
     {
         id: "Step 3",
-        title: "Finishing touches",
+        title: "Choose the details of your pedal",
         summary: "Knobs, led colors and bezels"
     },
     {
