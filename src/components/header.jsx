@@ -8,7 +8,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Logo from '../assets/bbcLogo.png';
-import Routes from '../Routes/HeaderRoutes';
+import routes from '../Routes/HeaderRoutes';
 
 const ResponsiveAppBar = (props) => {
   const trigger = useScrollTrigger();
@@ -37,7 +37,7 @@ const ResponsiveAppBar = (props) => {
               />
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>    
-                {Routes.map((prop, key) => {
+                {routes.map((prop, key) => {
                   return (
                     <Button
                       key={key}

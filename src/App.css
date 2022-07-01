@@ -23,33 +23,49 @@
   .App-body {
     background-color: 282c34;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: left;
+    justify-content: center; */
     font-size: calc(10px + 2vmin);
     color: white;
   }
 
   .Contact-body {
     background-color: 282c34; 
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: left;
-    justify-content: left;
+    justify-content: left; */
     font-size: calc(10px + 2vmin);
     color: white;
   }
 
   .Contact-form {
     background-color: 282c34;
-    flex-direction: column;
-    align-content: left;
+    /* flex-direction: column;
+    align-content: left; */
     color: white;
   }
 
   .App-link {
     color: #61dafb;
+  }
+
+  .How-it-works {
+    background-color: 282c34;
+    min-height: 100vh;
+    /* display: flex;
+    justify-content: center; */
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  .How-it-works-steps {
+    /* text-align: center;
+    align-content: center; */
+    font-size: calc(12px + 2vmin);
+    
   }
 
   .route-link {
