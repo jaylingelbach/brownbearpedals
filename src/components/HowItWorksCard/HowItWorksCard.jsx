@@ -8,6 +8,11 @@ import howItWorksCardInfo from '../../howItWorksCardInfo/howItWorksCardInfo';
 export default function HowItWorksCard() {
   return (
     <Grid>
+      {/* 
+        * src howItWorksCardInfo folder and file maps through the array grabbing 
+        * the prop and a key. 
+        * In the CardContent MUI component  Display the step id, title and summary
+      */}
     {howItWorksCardInfo.map((prop, key) => {
         return (
           <Card variant=" outlined" key={key} sx={{ minWidth: 275, maxWidth: 350, mt: 2}}>
