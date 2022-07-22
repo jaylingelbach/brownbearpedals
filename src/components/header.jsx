@@ -12,47 +12,50 @@ import routes from '../Routes/HeaderRoutes';
 
 const ResponsiveAppBar = (props) => {
   const trigger = useScrollTrigger();
-  
-
 
   return (
-      <Slide appear={false} direction="down" in={!trigger}>
-        <AppBar position="static">
-          <Container maxWidth="xl">
-            <Toolbar disableGutters>
-              <Typography
-                variant="h6"
-                noWrap
-                component="div"
-                sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-              >
+    <Slide appear={false} direction="down" in={!trigger}>
+      <AppBar position="static">
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+            >
               <Box
                 component="img"
                 sx={{
-                  height: 64,
+                  height: 64
                 }}
                 alt="Logo"
                 src={Logo}
                 aria-label="Logo for Brown Bear Creative"
               />
-              </Typography>
-              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>    
-                {routes.map((prop, key) => {
-                  return (
-                    <Button
-                      key={key}
-                    sx={{ display: 'block', margin: 'auto', textDecoration:'none', color:'white' }}
+            </Typography>
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+              {routes.map((prop, key) => {
+                return (
+                  <Button
+                    key={key}
+                    sx={{
+                      display: 'block',
+                      margin: 'auto',
+                      textDecoration: 'none',
+                      color: 'white'
+                    }}
                     href={prop.path}
-                    >
-                      {prop.navName}
-                    </Button>
-                  );
-                })}
-              </Box>
-            </Toolbar>
-          </Container>
-        </AppBar>
-      </Slide>
+                  >
+                    {prop.navName}
+                  </Button>
+                );
+              })}
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </Slide>
   );
 };
 export default ResponsiveAppBar;

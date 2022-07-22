@@ -10,29 +10,24 @@ import faqQuestions from '../faqQuestions/faqQuestions';
 export default function Faq() {
   return (
     <div className="App-body">
-      <Container maxWidth="xl" sx={{marginTop:2}}>
+      <Container maxWidth="xl" sx={{ marginTop: 2 }}>
         <div>
           {faqQuestions.map((prop, key) => {
             return (
-              <Accordion key={key} sx={{textAlign:'start'}}>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                >
+              <Accordion key={key} sx={{ textAlign: 'start' }}>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                   <Typography sx={{ fontWeight: 'bold' }}>
-                     {prop.summary}
+                    {prop.summary}
                   </Typography>
                 </AccordionSummary>
-              <AccordionDetails>
-                <Typography>
-                  {prop.details}
-                </Typography>
-              </AccordionDetails>
-          </Accordion>
-            )
+                <AccordionDetails>
+                  <Typography>{prop.details}</Typography>
+                </AccordionDetails>
+              </Accordion>
+            );
           })}
         </div>
       </Container>
     </div>
-    
   );
 }
