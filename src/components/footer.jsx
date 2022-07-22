@@ -15,18 +15,30 @@ export default function SimpleBottomNavigation() {
   let instagram = footerRoutes[2].path;
 
   return (
-      <Box sx={{ width: 'auto', mt:2 }}>
+    <Box sx={{ width: 'auto', mt: 2 }}>
       <BottomNavigation
-          showLabels
-          value={value}
-          onChange={(event, newValue) => {
+        showLabels
+        value={value}
+        onChange={(event, newValue) => {
           setValue(newValue);
-          }}
+        }}
       >
-          <BottomNavigationAction href={about} label="About" icon={<InfoIcon />} />
-          <BottomNavigationAction href={location} label="Location" icon={<LocationCityIcon />} />
-          <BottomNavigationAction href={instagram} label="Instagram" icon={<InstagramIcon />} />
+        <BottomNavigationAction
+          href={about}
+          label="About"
+          icon={<InfoIcon />}
+        />
+        <BottomNavigationAction
+          href={location}
+          label="Location"
+          icon={<LocationCityIcon />}
+        />
+        <BottomNavigationAction
+          href={instagram}
+          label="Instagram"
+          icon={<InstagramIcon />}
+        />
       </BottomNavigation>
-      </Box>
+    </Box>
   );
 }
